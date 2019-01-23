@@ -63,7 +63,7 @@ const Tab = styled.div`
 const TabGroup = ({tabs, onMouseEnter}) => (
   <Tabs>
     {tabs.map((tab, index) => (
-      <Tab onMouseEnter={() => onMouseEnter(index)}>{tab}</Tab>
+      <Tab onMouseEnter={() => onMouseEnter(index)} key={index}>{tab}</Tab>
     ))}
   </Tabs>
 )
@@ -216,7 +216,7 @@ const ProductCardBoardB = ({category, pics, tabs}) => {
     >
       <GridContainer>
         {/* 图片卡片位 */}
-        {pics.map((src, i) => React.createElement(picCards[i], {src}))}
+        {pics.map((src, i) => React.createElement(picCards[i], {src, key: i}))}
         {/* 产品卡片位 */}
         {tabs[index].products.map((product, i) =>
           React.createElement(productCardsA[i], {...product ,key: i})

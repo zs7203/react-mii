@@ -138,7 +138,6 @@ class Modal extends Component {
     const { play } = this.state
 
     return (
-      <Mask>
         <Container>
           <Header>
             <Title>{title}</Title>
@@ -161,7 +160,6 @@ class Modal extends Component {
             </Cover>
           </PlayerContainer>
         </Container>
-      </Mask>
     )
   }
 }

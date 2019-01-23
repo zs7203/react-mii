@@ -1,5 +1,4 @@
 import React, {Component} from "react"
-import styled from "styled-components"
 
 import MiNav from "./containers/MiNav"
 import MiHeader from "./containers/MiHeader"

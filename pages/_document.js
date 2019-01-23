@@ -16,10 +16,12 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
           {this.props.styleTags}
           <script src="//at.alicdn.com/t/font_509285_poudelwtluj.js"/>
+          <link href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" />
         </Head>
         <body>
           <Main />
           <NextScript />
+          <div id="modal"></div>
         </body>
       </html>
     )

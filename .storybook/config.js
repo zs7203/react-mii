@@ -1,6 +1,4 @@
 import { configure } from '@storybook/react';
-import "../src/styles/index.css"
-// import 'normalize.css'
 
 // automatically import all files ending in *.stories.js
 // const req = require.context('../stories', true, /.js$/);

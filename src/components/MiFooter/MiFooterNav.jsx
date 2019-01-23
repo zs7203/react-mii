@@ -100,7 +100,7 @@ const PositionedCategory = ({position, title, items}) => (
   <Category position={position}>
     <CategoryTitle>{title}</CategoryTitle>
     {items.map(item => (
-      <CategoryItem href={item.href}>{item.name}</CategoryItem>
+      <CategoryItem href={item.href} key={item.name}>{item.name}</CategoryItem>
     ))}
   </Category>
 )
@@ -195,7 +195,7 @@ const navs = [
 const MiFooterNav = () => (
   <Container>
     {navs.map((nav, index) => (
-      <PositionedCategory position={index + 1} {...nav} />
+      <PositionedCategory position={index + 1} {...nav} key={index}/>
     ))}
     <ContactWrapper/>
   </Container>

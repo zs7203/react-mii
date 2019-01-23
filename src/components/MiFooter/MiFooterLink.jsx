@@ -139,7 +139,7 @@ const MiFooterLink = () => (
       <NavContainer>
         <Navs>
           {data.links.map(nav => (
-            <Fragment>
+            <Fragment key={nav.title}>
               <Fence />
               <Nav {...nav}>{nav.title}</Nav>
             </Fragment>
@@ -163,7 +163,7 @@ const MiFooterLink = () => (
         </NavText>
       </NavContainer>
       <LinkContainer style={{ marginLeft: 'auto' }}>
-        {data.qualifications.map(link => <Link {...link} />)}
+        {data.qualifications.map((link, index) => <Link {...link} key={index} />)}
       </LinkContainer>
     </FooterContainer>
     <Slogan>探索黑科技，小米为发烧而生</Slogan>

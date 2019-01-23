@@ -6,7 +6,7 @@ import SlideCard from '../widget/SlideCard'
 
 export default ({ category, slides }) => (
   <BaseContainer title={category}>
-    <BaseBoard>{slides.map(slide => <SlideCard {...slide} />)}</BaseBoard>
+    <BaseBoard>{slides.map((slide, i) => <SlideCard {...slide} key={i}/>)}</BaseBoard>
   </BaseContainer>
 )
 

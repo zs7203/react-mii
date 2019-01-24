@@ -6,12 +6,12 @@ import { configure } from '@storybook/react';
 //   req.keys().forEach(filename => req(filename));
 // }
 function loadStories() {
-  require("../stories/MiNav")
-  require("../stories/MiHeader")
-  require("../stories/MiHero")
-  require("../stories/MiCube")
-  require("../stories/MiFlash")
-  require("../stories/MiCard")
+  require("../stories/MiNav");
+  require("../stories/MiHeader");
+  require("../stories/MiHero");
+  require("../stories/MiCube");
+  require("../stories/MiFlash");
+  require("../stories/MiCard");
   require("../stories/MiFooter")
 }
 

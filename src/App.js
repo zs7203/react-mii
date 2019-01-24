@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import styled from 'styled-components'
 
 import MiNav from "./containers/MiNav"
 import MiHeader from "./containers/MiHeader"
@@ -28,7 +29,7 @@ import {MiFooter} from './components/MiFooter'
 
 const withMargin = ({top = 0, bottom = 0} = {}) => comp => (
   <div style={{margin: `${top}px auto ${bottom}px`, width: "fit-content"}}>{comp}</div>
-)
+);
 
 class App extends Component {
   render() {

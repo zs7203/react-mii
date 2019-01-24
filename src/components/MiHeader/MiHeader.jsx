@@ -13,7 +13,7 @@ const Container = styled.div`
   z-index: 11;
   font: 16px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',
     'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
-`
+`;
 
 const Logo = styled.a`
   display: block;
@@ -30,7 +30,7 @@ const Logo = styled.a`
     height: 100%;
     background: url('https://s01.mifile.cn/i/mi-logo.png') no-repeat 0 50%;
   }
-`
+`;
 
 const Categories = styled.ul`
   display: inline-flex;
@@ -38,7 +38,7 @@ const Categories = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-`
+`;
 
 const Category = styled.li`
   padding: 26px 10px 38px;
@@ -48,7 +48,7 @@ const Category = styled.li`
   &:hover {
     color: #ff6700;
   }
-`
+`;
 
 class MiHeader extends Component {
   state = {
@@ -66,18 +66,18 @@ class MiHeader extends Component {
       '社区',
     ],
     categoryList: this.props.categoryList,
-  }
+  };
 
   handleMouseOver = e => {
     if (e.target.tagName === 'LI') {
-      let index = parseInt(e.target.dataset.index)
+      let index = parseInt(e.target.dataset.index);
       this.setState({ index })
     }
-  }
+  };
 
   handleMouseLeave = e => {
     this.setState({ index: -1 })
-  }
+  };
 
   render() {
     const {
@@ -85,7 +85,7 @@ class MiHeader extends Component {
       handleMouseLeave,
       state: { index, categoryList, categories },
       props: { RightSlot, Dropdown },
-    } = this
+    } = this;
 
     return (
       <div

@@ -16,4 +16,4 @@ storiesOf('页头 产品分类导航 - MiHero', module)
   ))
   .add('模块 - 轮播图 + 二级导航', () => (
     <MiHero {...data.MiHero} Slot={MiHeroCategories}/>
-  ))
+  ));

@@ -1865,28 +1865,56 @@ export default {
       category: "视频",
       videos: [
         {
-          title: '艺术品般陶瓷机身，惊艳、璀璨',
-          description: '小米MIX 2S，一面科技 一面艺术',
-          coverImg: 'https://i1.mifile.cn/a4/xmad_15269829174954_EwXae.jpg',
+          title: '一团火',
+          description: '小米创业8年内部纪录片（手机篇）',
+          coverImg: 'https://i1.mifile.cn/a4/xmad_15318974928021_cthgC.jpg',
           href: '',
+          modal: {
+            title: "艺术品般陶瓷机身，惊艳、璀璨",
+            videoUrl:
+              "https://v.mifile.cn/b2c-mimall-media/c2cb94c9485243e1767d43268fb90820.mp4",
+            coverImg:
+              "https://i8.mifile.cn/b2c-mimall-media/e0a27677f28572b6fa8dfcf5677d6499.jpeg"
+          }
         },
         {
-          title: '天生丽质的小米6X',
-          description: '让你一见倾心',
-          coverImg: 'https://i1.mifile.cn/a4/xmad_15269829055026_yqlnE.jpg',
+          title: '小米8，一部与众不同的手机',
+          description: '透明探索版，将科技与美学完美结合',
+          coverImg: 'https://i1.mifile.cn/a4/xmad_15278351912522_frJQc.jpg',
           href: '',
+          modal: {
+            title: "小米8，一部与众不同的手机",
+            videoUrl:
+              "https://v.mifile.cn/b2c-mimall-media/ed921294fb62caf889d40502f5b38147.mp4",
+            coverImg:
+              "https://i8.mifile.cn/b2c-mimall-media/6589da5fea27b58e5b061c1fb70bdfce.jpg"
+          }
         },
         {
-          title: '千元机里的拍照专家',
-          description: '红米Note 5 暗光逆光更出色',
-          coverImg: 'https://i1.mifile.cn/a4/xmad_15269840462222_kRKsw.jpg',
+          title: '小米MIX 2S，一面科技 一面艺术',
+          description: '艺术品般陶瓷机身，惊艳、璀璨',
+          coverImg: 'https://i1.mifile.cn/a4/xmad_15278359339164_dDTJC.jpg',
           href: '',
+          modal: {
+            title: "小米MIX 2S，一面科技 一面艺术",
+            videoUrl:
+              "https://v.mifile.cn/b2c-mimall-media/53fc775dd6b29ecd8df3e2ea35129766.mp4",
+            coverImg:
+              "https://i8.mifile.cn/b2c-mimall-media/850c08e77da8d346b3a0145252d114bb.jpg"
+          }
         },
         {
           title: '生活中无所不在的小爱同学',
           description: '一句话搞定手机复杂操作',
-          coverImg: 'https://i1.mifile.cn/a4/xmad_15269843866667_bkMDi.jpg',
+          coverImg: 'https://i1.mifile.cn/a4/xmad_15278358912266_LDHfI.jpg',
           href: '',
+          modal: {
+            title: "生活中无所不在的小爱同学",
+            videoUrl:
+              "https://v.mifile.cn/b2c-mimall-media/69f7b9881f4ed7123f0d473dcd44d621.mp4",
+            coverImg:
+              "https://i8.mifile.cn/b2c-mimall-media/7cc9789d84832c866798c7a3caa2f5d3.jpg"
+          }
         },
 
       ]

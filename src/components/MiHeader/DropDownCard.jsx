@@ -10,7 +10,7 @@ const Card = styled.div`
   font-size: 12px;
   text-align: center;
   background-color: #fff;
-`
+`;
 
 const CardFlag = styled.div`
   display: block;
@@ -25,35 +25,35 @@ const CardFlag = styled.div`
   border: 1px solid #ff6700;
   display: ${props => (props.show ? 'block' : 'none')};
   z-index: 11;
-`
+`;
 
 const CardFigure = styled.div`
   width: 160px;
   height: 110px;
   margin: 36px auto 16px;
   text-align: center;
-`
+`;
 
 const CardFigureLink = styled.a`
   display: block;
   color: #757575;
   text-decoration: none;
-`
+`;
 
 const CardFigureImg = styled.img`
   width: 160px;
   height: 110px;
-`
+`;
 
 const CardTitle = styled.p`
   color: #333333;
   margin: 0;
-`
+`;
 
 const CardPrice = styled.p`
   color: #ff6700;
   margin: 0;
-`
+`;
 
 const CardFence = styled.div`
   width: 1px;
@@ -63,7 +63,7 @@ const CardFence = styled.div`
   top: 36px;
   left: 0;
   display: ${props => (props.show ? 'block' : 'none')};
-`
+`;
 
 const DropDownCard = props => (
   <Card>
@@ -77,6 +77,6 @@ const DropDownCard = props => (
     <CardPrice>{props.price}</CardPrice>
     <CardFence show={!!props.fence} />
   </Card>
-)
+);
 
 export default DropDownCard

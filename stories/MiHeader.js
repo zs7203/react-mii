@@ -28,4 +28,4 @@ storiesOf("页头 下拉导航 - MiHeader", module)
       RightSlot={MiSearch}
       Dropdown={DropDownList}
     />
-  ))
+  ));

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   width: 296px;
-`
+`;
 
 const Form = styled.form`
   position: relative;
@@ -13,7 +13,7 @@ const Form = styled.form`
   width: 296px;
   height: 50px;
   transition: all 0.2s;
-`
+`;
 
 const SearchInput = styled.input.attrs({
   type: 'text',
@@ -26,7 +26,7 @@ const SearchInput = styled.input.attrs({
   line-height: 48px;
   outline: 0;
   transition: inherit;
-`
+`;
 
 const SearchBtn = styled.div`
   display: block;
@@ -44,7 +44,7 @@ const SearchBtn = styled.div`
       fill: #fff;
     }
   }
-`
+`;
 
 const SearchIcon = props => (
   <svg viewBox="0 0 1024 1024" width="24" height="24">
@@ -53,7 +53,7 @@ const SearchIcon = props => (
       fill={props.focus ? `#fff` : `#616161`}
     />
   </svg>
-)
+);
 
 const SearchHotWords = styled.div`
   position: absolute;
@@ -66,7 +66,7 @@ const SearchHotWords = styled.div`
   align-items: center;
   opacity: ${props => (props.focus ? 0 : 1)};
   transition: inherit;
-`
+`;
 
 const HotWord = styled.a`
   display: inline-block;
@@ -82,7 +82,7 @@ const HotWord = styled.a`
     color: #fff !important;
     background: #ff6700;
   }
-`
+`;
 
 const ProductList = styled.ul`
   position: absolute;
@@ -100,7 +100,7 @@ const ProductList = styled.ul`
   background-color: #fff;
   opacity: ${props => (props.focus ? 1 : 0)};
   transition: inherit;
-`
+`;
 
 const ProductItemWrapper = styled.li`
   font-size: 12px;
@@ -108,46 +108,46 @@ const ProductItemWrapper = styled.li`
   &:hover {
     background-color: rgba(202, 202, 202, 0.16);
   }
-`
+`;
 
 const ProductItem = styled.a`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
+`;
 
 const ProductItemName = styled.span`
   padding: 6px 15px;
   font-size: 12px;
-`
+`;
 
 const ProductItemStock = styled.span`
   padding: 6px 15px;
   font-size: 12px;
   color: #b0b0b0;
-`
+`;
 
 class MiSearch extends Component {
   state = {
     focus: false,
     hover: false,
-  }
+  };
 
   handleFocus = () => {
     this.setState({ focus: true })
-  }
+  };
 
   handleBlur = () => {
     this.setState({ focus: false })
-  }
+  };
 
   handlerMouseEnter = () => {
     this.setState({ hover: true })
-  }
+  };
 
   handlerMouseLeave = () => {
     this.setState({ hover: false })
-  }
+  };
 
   render() {
     return (

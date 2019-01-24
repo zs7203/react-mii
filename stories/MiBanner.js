@@ -7,4 +7,4 @@ import {initState as data} from '../store'
 
 storiesOf("页中 横幅 - MiBanner", module)
   .addDecorator(story => <Centered>{story()}</Centered>)
-  .add("模块 横幅 - MiBanner", () => <MiBanner {...data.MiBanner[0]}/>)
+  .add("模块 横幅 - MiBanner", () => <MiBanner {...data.MiBanner[0]}/>);

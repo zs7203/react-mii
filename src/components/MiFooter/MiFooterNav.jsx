@@ -6,18 +6,18 @@ const Container = styled.div`
   grid-template-rows: 40px 112px 40px;
   grid-template-columns: repeat(6, 160px) 252px;
   background-color: #fff;
-`
+`;
 
 const Category = styled.div`
   grid-row: 2;
   grid-column: ${props => props.position};
-`
+`;
 
 const CategoryTitle = styled.p`
   font-size: 14px;
   line-height: 1.25;
   color: #424242;
-`
+`;
 const CategoryItem = styled.a`
   display: block;
   margin: 10px 0 0;
@@ -28,19 +28,19 @@ const CategoryItem = styled.a`
     color: #ff6700;
     text-decoration: none;
   }
-`
+`;
 
 const ContactPhone = styled.p`
   margin: 0 0 5px;
   font-size: 22px;
   line-height: 1;
   color: #ff6700;
-`
+`;
 
 const ContactText = styled.p`
   font-size: 12px;
   margin: 0;
-`
+`;
 
 const ContactAction = styled.div`
   display: inline-block;
@@ -63,7 +63,7 @@ const ContactAction = styled.div`
     text-decoration: none;
     transition: all 0.2s linear;
   }
-`
+`;
 
 const ContactContainer = styled.div`
   grid-row: 2;
@@ -74,7 +74,7 @@ const ContactContainer = styled.div`
   flex-flow: column nowrap;
   align-items: center;
   border-left: 1px solid #e0e0e0;
-`
+`;
 
 const MsgSVG = ({width = 12, height = 12}) => (
   <svg viewBox="0 0 1024 1024" width={width} height={height}>
@@ -82,7 +82,7 @@ const MsgSVG = ({width = 12, height = 12}) => (
       d="M844.126818 766.481925 669.396261 766.481925c-58.768475 56.984852-148.941194 159.220305-148.941194 159.220305-5.465478 5.690606-14.354939 5.690606-19.804045 0 0 0-123.19174-127.516232-152.951531-159.220305l-170.718173 0c-63.302745 0-114.596991-59.161425-114.596991-123.348306L62.384327 207.313649c0-64.186881 50.170656-116.233258 112.037702-116.233258l672.243611 0c61.880349 0 112.037702 52.046377 112.037702 116.233258l0 435.81997C958.70539 707.310268 907.41012 766.481925 844.126818 766.481925L844.126818 766.481925 844.126818 766.481925zM286.466895 380.609531c-30.933523 0-56.020898 26.0237-56.020898 58.120722 0 32.088836 25.087375 58.112536 56.020898 58.112536 30.9325 0 56.016805-26.0237 56.016805-58.112536C342.4837 406.633231 317.399395 380.609531 286.466895 380.609531L286.466895 380.609531 286.466895 380.609531zM510.547417 380.609531c-30.934546 0-56.021921 26.0237-56.021921 58.120722 0 32.088836 25.102724 58.112536 56.021921 58.112536 30.933523 0 56.016805-26.0237 56.016805-58.112536C566.564221 406.633231 541.48094 380.609531 510.547417 380.609531L510.547417 380.609531 510.547417 380.609531zM734.624868 380.609531c-30.915104 0-56.016805 26.0237-56.016805 58.120722 0 32.088836 25.101701 58.112536 56.016805 58.112536 30.951943 0 56.020898-26.0237 56.020898-58.112536C790.645766 406.633231 765.576811 380.609531 734.624868 380.609531L734.624868 380.609531 734.624868 380.609531zM734.624868 380.609531"
     />
   </svg>
-)
+);
 
 const ContactWrapper = () => (
   <ContactContainer>
@@ -94,7 +94,7 @@ const ContactWrapper = () => (
       <span>{' '}联系客服</span>
     </ContactAction>
   </ContactContainer>
-)
+);
 
 const PositionedCategory = ({position, title, items}) => (
   <Category position={position}>
@@ -103,7 +103,7 @@ const PositionedCategory = ({position, title, items}) => (
       <CategoryItem href={item.href} key={item.name}>{item.name}</CategoryItem>
     ))}
   </Category>
-)
+);
 
 const navs = [
   {
@@ -190,7 +190,7 @@ const navs = [
       },
     ],
   },
-]
+];
 
 const MiFooterNav = () => (
   <Container>
@@ -199,6 +199,6 @@ const MiFooterNav = () => (
     ))}
     <ContactWrapper/>
   </Container>
-)
+);
 
 export default MiFooterNav

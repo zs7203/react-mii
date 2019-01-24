@@ -8,7 +8,7 @@ const Container = styled.div`
   margin: 0 auto;
   position: relative;
   background-color: #fff;
-`
+`;
 
 const BackSlides = styled.ul`
   width: 100%;
@@ -16,26 +16,26 @@ const BackSlides = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-`
+`;
 
 const Slide = styled.li`
   position: absolute;
   opacity: ${props => (props.show ? '1' : '0')};
   transition: all 0.2s ease;
-`
+`;
 
 const SlideLink = styled.a`
   display: block;
   color: #757575;
   text-decoration: none;
-`
+`;
 
 const SlideImg = styled.img.attrs({
   width: '1226px',
   height: '460px',
 })`
   display: block;
-`
+`;
 
 //Front
 
@@ -46,7 +46,7 @@ const FrontPanels = styled.div`
   top: 0;
   display: flex;
   z-index: 11;
-`
+`;
 
 const Arrows = styled.div`
   flex: auto 1 1;
@@ -62,7 +62,7 @@ const Arrows = styled.div`
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-`
+`;
 
 const Arrow = styled.span`
   display: inline-flex;
@@ -79,7 +79,7 @@ const Arrow = styled.span`
     }
     background-color: rgba(0, 0, 0, 0.5);
   }
-`
+`;
 
 // 左箭头图片
 const LeftSVG = ({ width = 32, height = 32, fill = '#757575' }) => (
@@ -89,7 +89,7 @@ const LeftSVG = ({ width = 32, height = 32, fill = '#757575' }) => (
       fill={fill}
     />
   </svg>
-)
+);
 
 // 右箭头图片
 const RightSVG = ({ width = 32, height = 32, fill = '#757575' }) => (
@@ -99,7 +99,7 @@ const RightSVG = ({ width = 32, height = 32, fill = '#757575' }) => (
       fill={fill}
     />
   </svg>
-)
+);
 
 const Pagers = styled.ul`
   position: absolute;
@@ -109,14 +109,14 @@ const Pagers = styled.ul`
   list-style-type: none;
   display: inline-flex;
   justify-content: center;
-`
+`;
 
 const Pager = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-`
+`;
 
 const PagerDot = styled.span`
   display: block;
@@ -136,12 +136,12 @@ const PagerDot = styled.span`
     background: rgba(255, 255, 255, 0.4);
     border-color: rgba(0, 0, 0, 0.4);
   }
-`
+`;
 
 class MiHero extends Component {
   state = {
     slidesIndex: 0,
-  }
+  };
 
   handleLeft = evt => {
     this.setState({
@@ -150,7 +150,7 @@ class MiHero extends Component {
           ? this.props.slides.length - 1
           : --this.state.slidesIndex,
     })
-  }
+  };
 
   handleRight = evt => {
     this.setState({
@@ -159,15 +159,15 @@ class MiHero extends Component {
           ? 0
           : ++this.state.slidesIndex,
     })
-  }
+  };
 
   handleClick = evt => {
     this.setState({ slidesIndex: parseInt(evt.currentTarget.dataset.index) })
-  }
+  };
 
   generatePager = () => {
     return new Array(this.props.slides.length).fill(0).map((v, i) => {
-      let active = this.state.slidesIndex === i
+      let active = this.state.slidesIndex === i;
       return (
         <Pager
           key={i}
@@ -179,7 +179,7 @@ class MiHero extends Component {
         </Pager>
       )
     })
-  }
+  };
 
   render() {
     const {
@@ -188,7 +188,7 @@ class MiHero extends Component {
       generatePager,
       state: { slidesIndex },
       props: { slides, categories, Slot },
-    } = this
+    } = this;
 
     return (
       <Container>

@@ -14,4 +14,4 @@ storiesOf("页头 魔方导航 - MiCube", module)
       href={'https://item.mi.com/product/10000117.html'}
     />
   ))
-  .add("模块 - 魔方模块", () => <MiCube {...data.MiCube} />)
+  .add("模块 - 魔方模块", () => <MiCube {...data.MiCube} />);

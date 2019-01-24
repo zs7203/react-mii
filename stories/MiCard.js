@@ -30,7 +30,7 @@ const modal = {
     "https://v.mifile.cn/b2c-mimall-media/53fc775dd6b29ecd8df3e2ea35129766.mp4",
   coverImg:
     "https://i8.mifile.cn/b2c-mimall-media/850c08e77da8d346b3a0145252d114bb.jpg"
-}
+};
 
 storiesOf("页中 卡片-MiCard", module)
   .addDecorator(story => <Centered>{story()}</Centered>)
@@ -57,4 +57,4 @@ storiesOf("页中 卡片-MiCard", module)
   .add("模块 - 轮播展板", () => <CarouselCardBoard {...data.MiCard[2]} />)
   .add("模块 - 热评展板", () => <HotCardBoard {...data.MiCard[3]} />)
   .add("模块 - 滑动内容展板", () => <SlideCardBoard {...data.MiCard[4]} />)
-  .add("模块 - 视频展板", () => <VideoCardBoard {...data.MiCard[5]} />)
+  .add("模块 - 视频展板", () => <VideoCardBoard {...data.MiCard[5]} />);

@@ -10,7 +10,7 @@ const TopBar = styled.div`
   font-size: 12px;
   color: #b0b0b0;
   background: #333;
-`
+`;
 
 const Wrapper = styled.div`
   width: 1226px;
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   background: #333;
-`
+`;
 
 const TopBarNav = styled.div`
   display: inline-flex;
@@ -27,7 +27,7 @@ const TopBarNav = styled.div`
   line-height: 40px;
   overflow: hidden;
   margin-left: ${props => (props.toRight ? "auto" : "0")};
-`
+`;
 
 const TopBarNavItem = styled.a`
   color: #b0b0b0;
@@ -36,12 +36,12 @@ const TopBarNavItem = styled.a`
     color: #fff;
     text-decoration: none;
   }
-`
+`;
 
 const Fence = styled.span`
   margin: 0 0.5em;
   color: #b0b0b0;
-`
+`;
 
 const Cart = styled.div`
   width: 120px;
@@ -66,7 +66,7 @@ const Cart = styled.div`
   & span {
     margin: 0 5px;
   }
-`
+`;
 
 const CartPop = styled.ul`
   position: absolute;
@@ -79,7 +79,7 @@ const CartPop = styled.ul`
   padding: 15px 0 0;
   background: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-`
+`;
 
 const navItemWithFence = arr => {
   return arr.map((item, i) => {
@@ -98,7 +98,7 @@ const navItemWithFence = arr => {
       )
     }
   })
-}
+};
 
 const CartSVG = ({width = 20, height = 20, color = "#fff"}) => (
   <svg viewBox="0 0 1024 1024" width="20" height="20">
@@ -107,10 +107,10 @@ const CartSVG = ({width = 20, height = 20, color = "#fff"}) => (
       fill={color}
     />
   </svg>
-)
+);
 
 export default ({navs, operations}) => {
-  const [cart, setCart] = useState(0)
+  const [cart, setCart] = useState(0);
   return (
     <TopBar>
       <Wrapper>

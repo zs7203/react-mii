@@ -8,21 +8,21 @@ import NavCard from "../widget/NavCard"
 
 const Container = styled.div`
   width: 1226px;
-  overflow: hidden;
-`
+  overflow: visible;
+`;
 
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
+`;
 
 const HeaderTitle = styled.h2`
   font-size: 22px;
   font-weight: 200;
   line-height: 58px;
   color: #333;
-`
+`;
 
 const BaseContainer = ({title, slot, children}) => (
   <Container>
@@ -32,7 +32,7 @@ const BaseContainer = ({title, slot, children}) => (
     </Header>
     {children}
   </Container>
-)
+);
 
 const GridContainer = styled.div`
   display: grid;
@@ -40,11 +40,11 @@ const GridContainer = styled.div`
   grid-template-columns: repeat(5, 234px);
   grid-gap: 14px;
   /* background-color: #fff; */
-`
+`;
 
 const Tabs = styled.div`
   display: inline-block;
-`
+`;
 
 const Tab = styled.div`
   display: inline-block;
@@ -58,7 +58,7 @@ const Tab = styled.div`
     color: #ff6700;
     border-bottom: 2px solid #ff6700;
   }
-`
+`;
 // A类型右侧导航
 const TabGroup = ({tabs, onMouseEnter}) => (
   <Tabs>
@@ -66,7 +66,7 @@ const TabGroup = ({tabs, onMouseEnter}) => (
       <Tab onMouseEnter={() => onMouseEnter(index)} key={index}>{tab}</Tab>
     ))}
   </Tabs>
-)
+);
 
 const Link = styled.a`
   width: 92px;
@@ -85,7 +85,7 @@ const Link = styled.a`
     fill: #ff6700;
     text-decoration: none;
   }
-`
+`;
 
 const Icon = ({icon, width = 24, height = 24}) => (
   <div style={{marginBottom: "2px"}}>
@@ -93,7 +93,7 @@ const Icon = ({icon, width = 24, height = 24}) => (
       <use xlinkHref={icon}/>
     </svg>
   </div>
-)
+);
 
 // B类型右侧导航（查看全部）
 const LinkAll = ({href}) => (
@@ -101,66 +101,66 @@ const LinkAll = ({href}) => (
     <span>查看全部</span>
     <Icon icon={"#icon-arrowright"}/>
   </Link>
-)
+);
 
 const PicPosition1 = styled(PicCard)`
   grid-row: 1;
   grid-column: 1;
-`
+`;
 const PicPosition2 = styled(PicCard)`
   grid-row: 2;
   grid-column: 1;
-`
+`;
 const PicPosition12 = styled(PicCard)`
   grid-row: 1 / 3;
   grid-column: 1;
   height: 614px;
-`
+`;
 
 const ProductPosition1 = styled(ProductCard)`
   grid-row: 1;
   grid-column: 2;
-`
+`;
 const ProductPosition2 = styled(ProductCard)`
   grid-row: 1;
   grid-column: 3;
-`
+`;
 const ProductPosition3 = styled(ProductCard)`
   grid-row: 1;
   grid-column: 4;
-`
+`;
 const ProductPosition4 = styled(ProductCard)`
   grid-row: 1;
   grid-column: 5;
-`
+`;
 const ProductPosition5 = styled(ProductCard)`
   grid-row: 2 / 4;
   grid-column: 2;
-`
+`;
 const ProductPosition6 = styled(ProductCard)`
   grid-row: 2 / 4;
   grid-column: 3;
-`
+`;
 const ProductPosition7 = styled(ProductCard)`
   grid-row: 2 / 4;
   grid-column: 4;
-`
+`;
 // 只用在B类型
 const ProductPosition8 = styled(ProductCard)`
   grid-row: 2 / 4;
   grid-column: 5;
-`
+`;
 // 只用在A类型
 const MiniProductPosition = styled(MiniProductCard)`
   grid-row: 2;
   grid-column: 5;
-`
+`;
 // 只用在A类型
 const NavPosition = styled(NavCard)`
   grid-row: 3;
   grid-column: 5;
-`
-const picCards = [PicPosition1, PicPosition2]
+`;
+const picCards = [PicPosition1, PicPosition2];
 
 const productCardsA = [
   ProductPosition1,
@@ -171,7 +171,7 @@ const productCardsA = [
   ProductPosition6,
   ProductPosition7,
   MiniProductPosition
-]
+];
 const productCardsB = [
   ProductPosition1,
   ProductPosition2,
@@ -181,11 +181,11 @@ const productCardsB = [
   ProductPosition6,
   ProductPosition7,
   ProductPosition8
-]
+];
 
 // 图片位是一张长图片
 const ProductCardBoardA = ({category, pics, tabs}) => {
-  const [index] = useState(0)
+  const [index] = useState(0);
   return (
     <BaseContainer
       title={category}
@@ -201,12 +201,12 @@ const ProductCardBoardA = ({category, pics, tabs}) => {
       </GridContainer>
     </BaseContainer>
   )
-}
+};
 
 
 // 图片位是上下两张普通图片
 const ProductCardBoardB = ({category, pics, tabs}) => {
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(0);
   return (
     <BaseContainer
       title={category}
@@ -226,6 +226,6 @@ const ProductCardBoardB = ({category, pics, tabs}) => {
       </GridContainer>
     </BaseContainer>
   )
-}
+};
 
 export {ProductCardBoardA, ProductCardBoardB}

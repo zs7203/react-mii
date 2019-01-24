@@ -12,7 +12,7 @@ const Container = styled.div`
   border-top-color: #ffac13;
   text-align: center;
   background-color: #fff;
-`
+`;
 
 const CardMask = styled.a`
   position: absolute;
@@ -21,12 +21,12 @@ const CardMask = styled.a`
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.02);
-`
+`;
 const CardImg = styled.img`
   display: block;
   width: 160px;
   margin: 0 auto 22px;
-`
+`;
 
 const CardTitle = styled.h3`
   margin: 0 20px 3px;
@@ -35,7 +35,7 @@ const CardTitle = styled.h3`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-`
+`;
 const CardDesc = styled.p`
   height: 18px;
   margin: 0 20px 12px;
@@ -44,23 +44,23 @@ const CardDesc = styled.p`
   white-space: nowrap;
   overflow: hidden;
   color: #b0b0b0;
-`
+`;
 
 const CardPrice = styled.p`
   margin: 0;
   font-size: 14px;
-`
+`;
 
 const CardFlashPrice = styled.span`
   color: #ff6709;
   ::after {
     content: " ";
   }
-`
+`;
 
 const CardPrePrice = styled.del`
   color: #b0b0b0;
-`
+`;
 
 export default ({ title, desc, src, price, flashPrice, href }) => (
   <Container>

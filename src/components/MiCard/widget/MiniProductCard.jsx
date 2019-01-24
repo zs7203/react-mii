@@ -8,7 +8,7 @@ const MiniContainer = styled(FloatCard)`
   width: 234px;
   height: 143px;
   padding-top: 50px;
-`
+`;
 
 const Image = styled.img`
   width: 80px;
@@ -16,7 +16,7 @@ const Image = styled.img`
   position: absolute;
   right: 20px;
   top: 32px;
-`
+`;
 
 const Name = styled.p`
   margin: -10px 110px 5px 30px;
@@ -24,11 +24,11 @@ const Name = styled.p`
   font-weight: 400;
   overflow: hidden;
   text-overflow: clip;
-`
+`;
 const Price = styled.p`
   margin: 0 110px 0 30px;
   color: #ff6700;
-`
+`;
 
 const MiniProductCard = ({name, price, picUrl, href, ...rest}) => (
   <MiniContainer {...rest}>
@@ -38,6 +38,6 @@ const MiniProductCard = ({name, price, picUrl, href, ...rest}) => (
     <Name>{name}</Name>
     <Price>{price}元</Price>
   </MiniContainer>
-)
+);
 
 export default MiniProductCard

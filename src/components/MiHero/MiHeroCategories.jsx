@@ -9,7 +9,7 @@ const Container = styled.div`
   font-size: 14px;
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',
     'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
-`
+`;
 
 const Categories = styled.ul`
   width: 100%;
@@ -18,7 +18,7 @@ const Categories = styled.ul`
   padding: 20px 0;
   list-style: none;
   background: rgba(0, 0, 0, 0.6);
-`
+`;
 
 const CategoryWrapper = styled.li`
   width: 100%;
@@ -29,21 +29,21 @@ const CategoryWrapper = styled.li`
   &:hover {
     background-color: #ff6700;
   }
-`
+`;
 
 const LeftArrow = styled.span`
   float: right;
   font: 16px/16px;
   font-weight: bolder;
   margin-right: 20px;
-`
+`;
 
 const Category = ({ dataIndex, onMouseEnter, children }) => (
   <CategoryWrapper data-index={dataIndex} onMouseEnter={onMouseEnter}>
     {children}
     <LeftArrow className="iconfont icon-more" />
   </CategoryWrapper>
-)
+);
 
 const PopMenu = styled.div`
   position: absolute;
@@ -56,7 +56,7 @@ const PopMenu = styled.div`
   align-content: flex-start;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
   background-color: #fff;
-`
+`;
 
 const PopItem = styled.div`
   width: 248px;
@@ -64,14 +64,14 @@ const PopItem = styled.div`
   padding: 18px 20px;
   display: flex;
   align-items: center;
-`
+`;
 
 const PopItemImg = styled.img.attrs({
   width: '40px',
   height: '40px',
 })`
   margin-right: 12px;
-`
+`;
 
 const PopItemText = styled.span`
   color: #333;
@@ -80,20 +80,20 @@ const PopItemText = styled.span`
   &:hover {
     color: #ff6700;
   }
-`
+`;
 
 class MiHeroCategoires extends Component {
   state = {
     index: -1,
-  }
+  };
 
   handleMouseEnter = evt => {
     this.setState({ index: parseInt(evt.currentTarget.dataset.index) })
-  }
+  };
 
   handleMouseLeave = evt => {
     this.setState({ index: -1 })
-  }
+  };
 
   render() {
     const {
@@ -103,8 +103,8 @@ class MiHeroCategoires extends Component {
       props: {
         categories: { cateNames, cateItems },
       },
-    } = this
-    const items = index < 0 ? [] : cateItems[index]
+    } = this;
+    const items = index < 0 ? [] : cateItems[index];
     return (
       <Container onMouseLeave={handleMouseLeave}>
         <Categories>

@@ -39,7 +39,7 @@ const CubeItem = styled.a`
     width: 1px;
     height: 70px;
   }
-`
+`;
 
 const Icon = ({ icon }) => (
   <div style={{ marginBottom: "2px" }}>
@@ -52,13 +52,13 @@ const Icon = ({ icon }) => (
       <use xlinkHref={icon} />
     </svg>
   </div>
-)
+);
 
 const Cube = styled.div`
   width: 228px;
   display: flex;
   flex-wrap: wrap;
-`
+`;
 
 export default ({cubes}) => (
   <Cube>

@@ -5,14 +5,14 @@ const FooterContainer = styled.div`
   width: 1226px;
   display: flex;
   align-items: center;
-`
+`;
 
 const LOGO = styled.img.attrs({
   src: 'https://s01.mifile.cn/i/logo-footer.png?v2',
 })`
   width: 57px;
   height: 57px;
-`
+`;
 
 const Navs = styled.div`
   width: 662px;
@@ -24,13 +24,13 @@ const Navs = styled.div`
   & > span:first-child {
     display: none;
   }
-`
+`;
 
 const NavContainer = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
-`
+`;
 
 const Nav = styled.a`
   font-size: 12px;
@@ -40,7 +40,7 @@ const Nav = styled.a`
     color: #ff6700;
     text-decoration: none;
   }
-`
+`;
 
 const Fence = styled.span.attrs({
   children: '|',
@@ -48,13 +48,13 @@ const Fence = styled.span.attrs({
   font-size: 12px;
   margin: 0 2px;
   color: #b0b0b0;
-`
+`;
 
 const NavText = styled.p`
   margin: 0;
   font-size: 12px;
   color: #b0b0b0;
-`
+`;
 
 const NavLink = styled.a`
   color: #b0b0b0;
@@ -62,19 +62,19 @@ const NavLink = styled.a`
     color: #ff6700;
     text-decoration: none;
   }
-`
+`;
 
 const LinkContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
-`
+`;
 
 const Link = styled.a`
   width: 84px;
   height: 28px;
   background-image: url(${props => props.imgUrl});
   background-size: contain;
-`
+`;
 const data = {
   links: [
     { title: '小米商城', href: '' },
@@ -122,7 +122,7 @@ const data = {
       href: 'https://www.mi.com/service/buy/commitment/',
     },
   ],
-}
+};
 
 const Slogan = styled.div`
   margin: 30px auto 0;
@@ -130,7 +130,7 @@ const Slogan = styled.div`
   height: 19px;
   text-indent: -9999em;
   background: url('https://s01.mifile.cn/i/slogan2016.png') no-repeat center 0;
-`
+`;
 
 const MiFooterLink = () => (
   <div style={{ backgroundColor: '#fff' }}>
@@ -168,6 +168,6 @@ const MiFooterLink = () => (
     </FooterContainer>
     <Slogan>探索黑科技，小米为发烧而生</Slogan>
   </div>
-)
+);
 
 export default MiFooterLink

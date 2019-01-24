@@ -6,7 +6,7 @@ const Container = styled.div`
   height: 120px;
   margin: 0 auto;
   overflow: hidden;
-`
+`;
 
 export default ({src, href='/'}) => (
   <Container>

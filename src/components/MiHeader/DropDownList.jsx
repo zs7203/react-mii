@@ -17,17 +17,17 @@ const Container = styled.div`
   //transform: scaleY(${props => (props.show ? "1" : "0")});
   opacity: ${props => (props.show ? "1" : "0")};
   transition: all .5s cubic-bezier(0, 1, 0.5, 1);
-`
+`;
 const CenterContainer = styled.div`
   display: flex;
   width: 1226px;
   //min-width: 1226px;
   margin: 0 auto;
-`
+`;
 
 const DropDownList = props => {
-  let { list } = props
-  let show = list.length > 0
+  let { list } = props;
+  let show = list.length > 0;
   return (
     <Container show={show}>
       <CenterContainer>
@@ -39,6 +39,6 @@ const DropDownList = props => {
       </CenterContainer>
     </Container>
   )
-}
+};
 
 export default DropDownList

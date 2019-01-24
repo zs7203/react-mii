@@ -9,19 +9,13 @@ const Play = styled.div`
   height: 24px;
   border: 2px solid #fff;
   border-radius: 12px;
+  padding-bottom: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
   fill: #fff;
-  transition: background-color 0.2s linear;
-  ${props =>
-    props.hover &&
-    css`
-      background-color: #ff6700;
-      border: 0;
-    `};
-`
+`;
 
 const PlaySVG = ({ icon }) => (
   <div>
@@ -29,13 +23,12 @@ const PlaySVG = ({ icon }) => (
       <use xlinkHref={icon} />
     </svg>
   </div>
-)
+);
 
-const PlayBtn = ({ hover }) => (
-  <Play hover={hover}>
-    {/* <img src={playPic} width={`20px`} height={`15px`} /> */}
+const PlayBtn = () => (
+  <Play id="play-btn">
     <PlaySVG icon={"#icon-play"} />
   </Play>
-)
+);
 
 export default PlayBtn

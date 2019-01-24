@@ -12,24 +12,24 @@ const NavContainer = styled(FloatCard)`
   justify-content: space-between;
   padding-top: 50px;
   fill: #ff6700;
-`
+`;
 
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-`
+`;
 
 const More = styled.p`
   font-size: 18px;
   color: #333;
   margin: 0;
-`
+`;
 
 const Category = styled.p`
   font-size: 12px;
   color: #757575;
-`
+`;
 
 const LeftArrow =  ({ icon }) => (
   <div>
@@ -42,7 +42,7 @@ const LeftArrow =  ({ icon }) => (
       <use xlinkHref={icon} />
     </svg>
   </div>
-)
+);
 
 const NavCard = ({ category, ...rest }) => (
   <NavContainer {...rest}>
@@ -52,6 +52,6 @@ const NavCard = ({ category, ...rest }) => (
     </Wrapper>
     <LeftArrow icon={"#icon-arrow-right-circle"}/>
   </NavContainer>
-)
+);
 
 export default NavCard

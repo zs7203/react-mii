@@ -12,7 +12,7 @@ const theme = {
   grey: '#757575',
   text: '#333',
   mute: '#b0b0b0',
-}
+};
 
 const Card = styled.div`
   width: 296px;
@@ -35,26 +35,25 @@ const Card = styled.div`
   &:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     transform: translate3d(0, -2px, 0);
-    transition: all 0.5s ease;
     #arrows > span {
       opacity: 0.3;
     }
   }
-`
+`;
 
 const Header = styled.div`
   margin: 0 10px 18px;
   font-size: 16px;
   font-weight: 400;
   color: ${props => props.theme[props.color] || props.theme.red};
-`
+`;
 
 const CarouselWrapper = styled.div`
   height: 340px;
   overflow: hidden;
   transition: margin-left 0.5s ease;
   margin-left: ${props => `-${props.index * 296}px`};
-`
+`;
 
 const List = styled.ul`
   width: 1184px;
@@ -62,13 +61,14 @@ const List = styled.ul`
   padding: 0;
   margin: 0;
   list-style: none;
-`
+`;
 
 const Item = styled.li`
   flex: 0 0 auto;
   width: 296px;
   height: 340px;
-`
+  position: relative;
+`;
 
 const ItemName = styled.h4`
   margin: 0 20px 5px;
@@ -79,7 +79,7 @@ const ItemName = styled.h4`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-`
+`;
 
 const ItemDesc = styled.div`
   margin: 0 48px 10px;
@@ -89,20 +89,20 @@ const ItemDesc = styled.div`
   text-align: center;
   overflow: hidden;
   color: ${props => props.theme.mute};
-`
+`;
 
 const ItemPrice = styled.p`
   height: 21px;
   margin: 0 10px 15px;
   font-size: 14px;
   color: ${props => props.theme.text};
-`
+`;
 
 const ItemFigure = styled.div`
   width: 216px;
   height: 154px;
   margin: 0 auto;
-`
+`;
 
 const ItemLink = styled.a`
   display: block;
@@ -113,7 +113,7 @@ const ItemLink = styled.a`
     width: 216px;
     height: 154px;
   }
-`
+`;
 
 const PromptBtn = styled.a`
   width: 118px;
@@ -135,7 +135,7 @@ const PromptBtn = styled.a`
     background-color: ${props => props.theme[props.color]};
     text-decoration: none;
   }
-`
+`;
 
 const Pagers = styled.ul`
   position: absolute;
@@ -146,7 +146,7 @@ const Pagers = styled.ul`
   list-style-type: none;
   display: flex;
   justify-content: center;
-`
+`;
 
 const Pager = styled.li`
   width: 30px;
@@ -159,7 +159,7 @@ const Pager = styled.li`
     background-color: ${props =>
       props.active ? props.theme.white : props.theme.primary};
   }
-`
+`;
 
 const PagerDot = styled.span`
   display: block;
@@ -174,7 +174,7 @@ const PagerDot = styled.span`
   background-color: ${props =>
     props.active ? props.theme.white : props.theme.mute};
   transition: all 0.5s ease;
-`
+`;
 
 const ArrowWrapper = styled.div`
   width: 100%;
@@ -184,7 +184,7 @@ const ArrowWrapper = styled.div`
   margin-top: -20px;
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const Arrow = styled.span`
   display: inline-flex;
@@ -199,7 +199,7 @@ const Arrow = styled.span`
     cursor: pointer;
     opacity: 1 !important;
   }
-`
+`;
 
 // 左箭头图片
 const LeftSVG = ({ width = 18, height = 18, fill = '#fff' }) => (
@@ -209,7 +209,7 @@ const LeftSVG = ({ width = 18, height = 18, fill = '#fff' }) => (
       fill={fill}
     />
   </svg>
-)
+);
 
 // 右箭头图片
 const RightSVG = ({ width = 18, height = 18, fill = '#fff' }) => (
@@ -219,7 +219,7 @@ const RightSVG = ({ width = 18, height = 18, fill = '#fff' }) => (
       fill={fill}
     />
   </svg>
-)
+);
 
 class SlideCard extends Component {
   state = {
@@ -257,15 +257,15 @@ class SlideCard extends Component {
         url: 'https://s01.mifile.cn/i/index/more-app.jpg',
       },
     },
-  }
+  };
 
   handleClick = evt => {
     this.setState({ index: parseInt(evt.currentTarget.dataset.index) })
-  }
+  };
 
   handleLeft = evt => {
     this.setState({ index: this.state.index - 1 < 0 ? 0 : --this.state.index })
-  }
+  };
 
   handleRight = evt => {
     this.setState({
@@ -274,7 +274,7 @@ class SlideCard extends Component {
           ? this.props.items.length
           : ++this.state.index,
     })
-  }
+  };
 
   appendPrompt = whichPrompt => {
     return (
@@ -295,7 +295,7 @@ class SlideCard extends Component {
         </ItemFigure>
       </Item>
     )
-  }
+  };
 
   generateList = prompt => {
     return (
@@ -315,11 +315,11 @@ class SlideCard extends Component {
         ))
         .concat(this.appendPrompt(prompt))
     )
-  }
+  };
 
   generatePager = () => {
     return new Array(this.props.items.length + 1).fill(0).map((v, i) => {
-      let active = this.state.index === i
+      let active = this.state.index === i;
       return (
         <Pager
           key={i}
@@ -331,10 +331,10 @@ class SlideCard extends Component {
         </Pager>
       )
     })
-  }
+  };
 
   render() {
-    const { category, description, themeColor, items, prompt } = this.props
+    const { category, description, themeColor, items, prompt } = this.props;
 
     return (
       <ThemeProvider theme={theme}>
@@ -362,6 +362,6 @@ SlideCard.propTypes = {
   themeColor: PropTypes.oneOf(['orange', 'green', 'red', 'blue']).isRequired,
   category: PropTypes.oneOf(['book', 'theme', 'game', 'app']).isRequired,
   items: PropTypes.array.isRequired,
-}
+};
 
 export default SlideCard

@@ -7,7 +7,7 @@ import CommentBar from '../basic/CommentBar.jsx'
 
 const ProductCardContainer = styled(FloatCard)`
   padding: 34px 0 20px;
-`
+`;
 
 const Flag = styled.div`
   z-index: 5;
@@ -18,18 +18,18 @@ const Flag = styled.div`
   font-size: 12px;
   text-align: center;
   color: #fff;
-`
+`;
 
 const PositionedFlag = styled(Flag)`
   top: 0;
   left: 50%;
   margin-left: -32px;
   background-color: ${props => (props.type === 0 ? '#83c44e' : '#e53935')};
-`
+`;
 
 const PositionedCommentBar = styled(CommentBar)`
   bottom: 0;
-`
+`;
 
 const Image = styled.img`
   display: block;
@@ -37,7 +37,7 @@ const Image = styled.img`
   height: 150px;
   margin: 0 auto 18px;
   cursor: pointer;
-`
+`;
 
 const ProductName = styled.p`
   color: #333;
@@ -47,7 +47,7 @@ const ProductName = styled.p`
   text-align: center;
   text-overflow: ellipsis;
   cursor: pointer;
-`
+`;
 
 const ProductText = styled.p`
   margin: 0 10px 10px;
@@ -58,36 +58,36 @@ const ProductText = styled.p`
   white-space: nowrap;
   overflow: hidden;
   color: #b0b0b0;
-`
+`;
 
 const PriceList = styled.div`
   margin: 0 10px 10px;
   text-align: center;
-`
+`;
 
 const Price = styled.span`
   color: #ff6700;
-`
+`;
 const OriginalPrice = styled.del`
   color: #b0b0b0;
-`
+`;
 
 class ProductCard extends React.Component {
   state = {
     show: false,
-  }
+  };
 
   handlerMouseLeave = () => {
     this.setState({show: false})
-  }
+  };
 
   handlerMouseEnter = () => {
     this.setState({show: true})
-  }
+  };
 
   render() {
-    const {flag, info, comment, ...rest} = this.props
-    const {show} = this.state
+    const {flag, info, comment, ...rest} = this.props;
+    const {show} = this.state;
     return (
       <ProductCardContainer
         {...rest}

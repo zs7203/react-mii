@@ -11,7 +11,7 @@ const Container = styled.div`
   /* overflow: hidden; */
   display: flex;
   justify-content: space-between;
-`
+`;
 
 const MiCube = ({cubes, cards}) => (
   <Container>
@@ -20,6 +20,6 @@ const MiCube = ({cubes, cards}) => (
       <FloatedCard {...d} key={i} />
     ))}
   </Container>
-)
+);
 
 export { Cubes, FloatedCard, MiCube }

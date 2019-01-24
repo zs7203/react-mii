@@ -3,9 +3,9 @@ import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
   static getInitialProps ({ renderPage }) {
-    const sheet = new ServerStyleSheet()
-    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />))
-    const styleTags = sheet.getStyleElement()
+    const sheet = new ServerStyleSheet();
+    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
+    const styleTags = sheet.getStyleElement();
     return { ...page, styleTags }
   }
 
@@ -19,9 +19,9 @@ export default class MyDocument extends Document {
           <link href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" />
         </Head>
         <body>
+          <div id='modal' />
           <Main />
           <NextScript />
-          <div id="modal"></div>
         </body>
       </html>
     )

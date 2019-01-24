@@ -8,23 +8,30 @@ const WideBoard = styled(BaseBoard)`
   width: 2466px;
   margin-left: ${props => (props.index === 0 ? '0' : '-1240px')};
   transition: all 0.5s ease-in-out;
-`
+`;
+
+const BoardWindow = styled.div`
+  width: 1226px;
+  overflow: visible;
+  overflow-x: hidden;
+  padding-bottom: 30px;
+`;
 
 export default class extends Component {
   state = {
     index: 0,
-  }
+  };
 
   handleLeftClick = () => {
     this.setState({index: 0})
-  }
+  };
 
   handleRightClick = () => {
     this.setState({index: 1})
-  }
+  };
 
   render() {
-    const {category, products} = this.props
+    const {category, products} = this.props;
 
     return (
       <BaseContainer
@@ -37,9 +44,11 @@ export default class extends Component {
           />
         }
       >
-        <WideBoard index={this.state.index}>
-          {products.map((product, i) => <ProductCard {...product} key={i}/>)}
-        </WideBoard>
+        <BoardWindow>
+          <WideBoard index={this.state.index}>
+            {products.map((product, i) => <ProductCard {...product} key={i}/>)}
+          </WideBoard>
+        </BoardWindow>
       </BaseContainer>
     )
   }
